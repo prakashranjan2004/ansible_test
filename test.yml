@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  tasks:
+          - name: get resolv
+            command: cat /etc/resolv.conf
+            register: resolv
+
+          - debug:
+              var: resolv
